@@ -9,7 +9,9 @@ function About({bio, links}) {
       <h2>About Me</h2>
       {!bio ? null : bio == "" ? null : <p>{bio}</p>}
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      <Links github={links.github} linkedin={links.linkedin} />
+      <Links {...links}/> 
+      {/* <Links github={links.github} linkedin={links.linkedin} /> */}
+      {/* props drilling, passing props more than 1 level deep */}
     </div>
   );
 }
