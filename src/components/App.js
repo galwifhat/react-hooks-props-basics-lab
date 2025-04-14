@@ -8,10 +8,15 @@ import About from "./About";
 import user from "../data/user";
 
 function App() {
+  console.log(user)
   return (
     <div>
       <NavBar />
-      <Home name="Liza" city="New York" color="firebrick" />
+      <Home
+        name={user.name}
+        city={user.city}
+        color={user.color}
+      />
       <About bio="I made this!" links={user.links} />
     </div>
   );

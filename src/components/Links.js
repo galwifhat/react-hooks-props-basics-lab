@@ -1,12 +1,12 @@
 import React from "react";
-import user from "../data/user";
 
-function Links() {
+function Links({github,linkedin}) {
+console.log(github, linkedin);
   return (
     <>
       <h3>Links</h3>
-      <a href={user.links.github}>{user.links.github}</a>
-      <a href={user.links.linkedin}>{user.links.linkedin}</a>
+      <a href={github}>{github}</a>
+      <a href={linkedin}>{linkedin}</a>
     </>
   );
 }

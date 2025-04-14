@@ -1,14 +1,15 @@
 import React from "react";
 import Links from "./Links";
 
-function About(user) {
+function About({bio, links}) {
+  console.log(bio, links)
   
   return (
     <div id="about">
       <h2>About Me</h2>
-      {!user.bio? null : user.bio==""? null : <p>{user.bio}</p>}
+      {!bio ? null : bio == "" ? null : <p>{bio}</p>}
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      <Links links={user.links} />
+      <Links github={links.github} linkedin={links.linkedin} />
     </div>
   );
 }
